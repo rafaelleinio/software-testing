@@ -1,0 +1,26 @@
+name: "Test"
+on:
+  push:
+    branches:
+      - master
+  pull_request:
+
+jobs:
+  Pipeline:
+    runs-on: ubuntu-16.04
+    container: python:3.7.6
+
+    steps:
+    - uses: actions/checkout@v2
+
+    - name: Install dependencies
+      run: make ci-install
+
+    - name: Style check
+      run: PYTHONPATH=./pip/deps make style-check
+
+    - name: Quality check
+      run: PYTHONPATH=./pip/deps make quality-check
+
+    - name: Tests
+      run: PYTHONPATH=./pip/deps make tests
