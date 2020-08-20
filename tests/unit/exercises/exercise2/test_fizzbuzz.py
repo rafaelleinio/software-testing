@@ -14,6 +14,11 @@ class TestFizzBuzz:
         # assert
         assert FizzBuzz._is_multiple_of_5(x)
 
+    @pytest.mark.parametrize("x, element", [(1, "1"), (3, "Fizz"), (5, "Buzz"), (15, "FizzBuzz")])
+    def test__get_element(self, x, element):
+        # assert
+        assert element == FizzBuzz._get_element(x)
+
     @pytest.mark.parametrize(
         "n, target_sequence",
         [
@@ -27,13 +32,13 @@ class TestFizzBuzz:
                     "Fizz",
                     "4",
                     "Buzz",
-                    "6",
+                    "Fizz",
                     "7",
                     "8",
-                    "9",
-                    "10",
+                    "Fizz",
+                    "Buzz",
                     "11",
-                    "12",
+                    "Fizz",
                     "13",
                     "14",
                     "FizzBuzz",
@@ -47,6 +52,9 @@ class TestFizzBuzz:
 
         # act
         result_sequence = fizzbuzz.get_sequence()
+
+        print(result_sequence)
+        print(target_sequence)
 
         # assert
         assert result_sequence == target_sequence
