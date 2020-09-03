@@ -14,7 +14,9 @@ class TestFizzBuzz:
         # assert
         assert FizzBuzz._is_multiple_of_5(x)
 
-    @pytest.mark.parametrize("x, element", [(1, "1"), (3, "Fizz"), (5, "Buzz"), (15, "FizzBuzz")])
+    @pytest.mark.parametrize(
+        "x, element", [(1, "1"), (3, "Fizz"), (5, "Buzz"), (15, "FizzBuzz")]
+    )
     def test__get_element(self, x, element):
         # assert
         assert element == FizzBuzz._get_element(x)

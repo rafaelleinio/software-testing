@@ -38,4 +38,4 @@ class FizzBuzz:
 
     def get_sequence(self) -> List[str]:
         """Get Fizz Buzz sequence."""
-        return [self._get_element(x) for x in range(1, self.n+1)]
+        return [self._get_element(x) for x in range(1, self.n + 1)]
