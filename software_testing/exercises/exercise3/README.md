@@ -31,5 +31,5 @@ Implement the `isValid (string): boolean` function that takes a string and retur
 | ("abcdefg", False) | (7)             |
 
 ## Links:
-- [Function Implementation]()
-- [Tests Implementation]()
+- [Function Implementation](https://github.com/rafaelleinio/software-testing/blob/master/software_testing/exercises/exercise3/is_valid.py)
+- [Tests Implementation](https://github.com/rafaelleinio/software-testing/blob/master/tests/unit/exercises/exercise3/test_is_valid.py)

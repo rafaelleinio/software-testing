@@ -13,7 +13,7 @@ from software_testing.exercises.exercise3.is_valid import is_valid
         ("abcdefg", False),
     ],
 )
-def test__is_multiple_of_3(exp, target):
+def test_is_valid(exp, target):
     # act
     result = is_valid(exp)
 
