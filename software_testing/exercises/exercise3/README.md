@@ -19,16 +19,18 @@ Implement the `isValid (string): boolean` function that takes a string and retur
 | Contains only letters or digits | Yes (3)             | No (4)         |
 | Allowed Length                  | 1 <= [L] <= 6 (5)   | [L] == 0 (6)   |
 |                                 |                     | [L] > 6 (7)    |
+| Only string type                | Yes (8)             | No (9)         |
 
 ## Test Cases
 
 | Test Cases         | Classes Covered |
 |--------------------|-----------------|
-| ("abc123", True)   | (1), (3), (5)   |
+| ("abc123", True)   | (1), (3), (5), (8)   |
 | ("1abc", False)    | (2)             |
 | ("a bc", False)    | (4)             |
 | ("", False)        | (6)             |
 | ("abcdefg", False) | (7)             |
+| (123, False)       | (9)             |
 
 ## Links:
 - [Function Implementation](https://github.com/rafaelleinio/software-testing/blob/master/software_testing/exercises/exercise3/is_valid.py)
