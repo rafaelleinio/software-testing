@@ -36,6 +36,15 @@ integration-tests:
 	@echo ""
 	@python -m pytest -W ignore::DeprecationWarning --cov-config=.coveragerc --cov-report term --cov-report xml:integration-tests-cov.xml --cov=software_testing --cov-fail-under=60 tests/integration
 
+.PHONY: mutation-tests
+## run mutatiton tests
+mutation-tests:
+	@echo ""
+	@echo "Tests"
+	@echo "=========="
+	@echo ""
+	@python -m mutmut run
+
 .PHONY: style-check
 ## run code style checks with black
 style-check:
